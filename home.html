@@ -1,0 +1,14 @@
+{%extends 'layouts.html'%}
+
+{% block body %}
+{{ variable }}
+<h1>Gas mean:</h1>
+{{mean}}
+<h1>Gas median:</h1>
+{{median}}
+
+<form action="/data" method = "POST">
+    <p>What question can the oracle help with today?<input type = "text" name = "Name" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>
+{%endblock%}
